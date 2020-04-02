@@ -1,0 +1,16 @@
+<p>test</p>
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+{{ object_list }}
+
+{% for instance in object_list %}
+
+    <p>{{ instance.id }} - <a href="/products/{{ instance.id }}/"> {{ instance.title }} </a></p>
+    <p> another way {{ instance.id }} - <a href="{{ instance.get_absolute_url }}"> {{ instance.title }} </a></p>
+
+
+{% endfor %}
+
+{% endblock %}      
