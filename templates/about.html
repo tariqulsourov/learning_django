@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+<h1>Hello bangladesh</h1>
+<h1>This is about page</h1>
+        {{request.user}}
+
+        {{request.user.is_authenticated}}
+
+<p>
+    {{ my_text}}, {{my_number}}, {{my_list}}
+</p>
+
+<ul>
+    {% for list_item in my_list %}
+        {% if list_item == 13 %}
+            <li>{{ forloop.counter }} - {{ list_item|add:10 }} </li>
+        
+        {% else %}    
+            <li>{{ forloop.counter }} - {{ list_item }} </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% endblock %}

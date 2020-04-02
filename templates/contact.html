@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+<h1>Hello bangladesh</h1>
+<h1>
+    Hello this is contact page
+</h1>
+        {{request.user}}
+
+        {{request.user.is_authenticated}}
+
+{% endblock %}
